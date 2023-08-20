@@ -4,9 +4,7 @@ function playSound(idAudioElement) {
 
 const keysList = document.querySelectorAll('.tecla');
 
-let i = 0;
-
-while (i < keysList.length) {
+for (let i = 0; i < keysList.length; i++) {
     const key = keysList[i];
     const instrument = key.classList[1];
     const idAudio = `#som_${instrument}`;
@@ -14,6 +12,4 @@ while (i < keysList.length) {
     key.onclick = function () {
         playSound(idAudio);
     }
-
-    i = i + 1;
 }
